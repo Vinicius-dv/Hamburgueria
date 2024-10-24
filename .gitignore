@@ -1,0 +1,13 @@
+# Ignorar a pasta node_modules (pacotes instalados)
+node_modules/
+
+# Ignorar arquivos de log do npm e yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar arquivos de variáveis de ambiente
+.env
+
+# Ignorar outras configurações locais do sistema
+.DS_Store
