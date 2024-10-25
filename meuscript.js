@@ -193,7 +193,7 @@ checkout_btn.addEventListener('click',()=>{
 
    
     console.log(dados)
-    fetch('https://hamburgueria-1f9f.onrender.com',{
+    fetch('https://hamburgueria-1f9f.onrender.com/order/checkout',{
         method:'POST',
         headers:{
             'Content-Type':'Application/json',
