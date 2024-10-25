@@ -284,7 +284,7 @@ if(esta_aberto){
             reviewText: reviewText
         };
     
-        fetch('https://hamburgueria-1f9f.onrender.com', {
+        fetch('https://hamburgueria-1f9f.onrender.com/sistema/avaliacoes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
