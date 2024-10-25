@@ -193,7 +193,7 @@ checkout_btn.addEventListener('click',()=>{
 
    
     console.log(dados)
-    fetch('http://localhost:6000/order/checkout',{
+    fetch('https://hamburgueria-1f9f.onrender.com',{
         method:'POST',
         headers:{
             'Content-Type':'Application/json',
@@ -284,7 +284,7 @@ if(esta_aberto){
             reviewText: reviewText
         };
     
-        fetch('http://localhost:6000/sistema/avaliacoes', {
+        fetch('https://hamburgueria-1f9f.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -311,7 +311,7 @@ if(esta_aberto){
     
 
     function fetchAvaliacoes() {
-        fetch('http://localhost:6000/sistema/avaliacoes')
+        fetch('https://hamburgueria-1f9f.onrender.com')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro ao buscar avaliações');
@@ -386,7 +386,7 @@ if(esta_aberto){
     
 
     function enviarNovaAvaliacao(avaliacaoId, novaAvaliacao) {
-        fetch(`http://localhost:6000/sistema/avaliacoes/${avaliacaoId}`, {
+        fetch(`https://hamburgueria-1f9f.onrender.com/${avaliacaoId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -447,7 +447,7 @@ if(esta_aberto){
         const avaliacao = elemento.closest('div.bg-white')
         const avalicaoId = avaliacao.dataset.id
         if(avaliacao){
-            fetch(`http://localhost:6000/avaliacoes/${avalicaoId}`,{
+            fetch(`https://hamburgueria-1f9f.onrender.com/${avalicaoId}`,{
                 method:'DELETE',
             })
             .then(res=>{
