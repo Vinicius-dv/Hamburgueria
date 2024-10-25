@@ -1,13 +1,17 @@
+
+require('dotenv').config()
 console.log('Fala peixe')
 const express = require('express')
 const body_parser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
-const porta = 3000
+const porta = 6000
 const cors = require('cors')
 
-require('dotenv').config()
-const DB_URI = process.env.DB_URI
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_NAME = process.env.DB_NAME;
+const DB_URI = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.dirg5.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
 
 app.use(body_parser.json())
 app.use(cors())
@@ -136,5 +140,5 @@ app.put('/sistema/avaliacoes/:id', (req, res) => {
 });
 
 app.listen(porta,()=>{
-    console.log('Servidor rodando na porta 3000')
+    console.log('Servidor rodando na porta 6000')
 })
