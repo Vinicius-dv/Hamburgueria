@@ -6,17 +6,11 @@ const app = express()
 const porta = 3000
 const cors = require('cors')
 
-require('dotenv').config()
-const DB_URI = process.env.DB_URI
-
 app.use(body_parser.json())
 app.use(cors())
 
 mongoose.Promise = global.Promise
-mongoose.connect(DB_URI,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect('mongodb+srv://vini:laionel@cluster0.dirg5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     console.log('Conectado ao mongo')
   })
