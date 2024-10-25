@@ -193,7 +193,7 @@ checkout_btn.addEventListener('click',()=>{
 
    
     console.log(dados)
-    fetch('http://localhost:3000/order/checkout',{
+    fetch('http://localhost:6000/order/checkout',{
         method:'POST',
         headers:{
             'Content-Type':'Application/json',
@@ -284,7 +284,7 @@ if(esta_aberto){
             reviewText: reviewText
         };
     
-        fetch('http://localhost:3000/sistema/avaliacoes', {
+        fetch('http://localhost:6000/sistema/avaliacoes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -311,7 +311,7 @@ if(esta_aberto){
     
 
     function fetchAvaliacoes() {
-        fetch('http://localhost:3000/sistema/avaliacoes')
+        fetch('http://localhost:6000/sistema/avaliacoes')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro ao buscar avaliações');
@@ -386,7 +386,7 @@ if(esta_aberto){
     
 
     function enviarNovaAvaliacao(avaliacaoId, novaAvaliacao) {
-        fetch(`http://localhost:3000/sistema/avaliacoes/${avaliacaoId}`, {
+        fetch(`http://localhost:6000/sistema/avaliacoes/${avaliacaoId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -447,7 +447,7 @@ if(esta_aberto){
         const avaliacao = elemento.closest('div.bg-white')
         const avalicaoId = avaliacao.dataset.id
         if(avaliacao){
-            fetch(`http://localhost:3000/avaliacoes/${avalicaoId}`,{
+            fetch(`http://localhost:6000/avaliacoes/${avalicaoId}`,{
                 method:'DELETE',
             })
             .then(res=>{
