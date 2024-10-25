@@ -77,7 +77,7 @@ app.post('/sistema/avaliacoes',(req,res)=>{
 
 
 app.get('/sistema/avaliacoes', (req, res) => {
-  console.log('Olá')
+  console.log('olá peixe')
   Sist_ava.find()
       .then(avaliacoes => {
           return res.status(200).json(avaliacoes);
